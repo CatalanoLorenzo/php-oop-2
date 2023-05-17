@@ -1,16 +1,16 @@
 <?php
-include_once __DIR__ . '/Models/Computer.php';
-include_once __DIR__ . '/Models/Destop.php';
-include_once __DIR__ . '/Models/Laptop.php';
-include_once __DIR__ . '/Models/Cpu.php';
-include_once __DIR__ . '/Models/Gpu.php';
-include_once __DIR__ . '/Models/Ram.php';
-include_once __DIR__ . '/Models/Ssd.php';
-include_once __DIR__ . '/Models/Motherboard.php';
+include_once __DIR__ ."/../Models/Computer.php";
+include_once __DIR__ ."/../Models/Desktop.php";
+include_once __DIR__ ."/../Models/Laptop.php";
 
+/* $mb = 'PSQ-int-584';
+$cpu = 'Q9400';
+$gpu = 'Nvidea GTS 8800';
+$ram = 'DDR3 1200mhz';
+$ssd = 'Sata 2.5 kingstore'; */
 $computers=[
 
-    new Computer(999,new Desktop('Cooler MasterXXX',new MotherboardD('PSQ-int-584'),new CpuD('Q9400'),new GpuD('Nvidea GTS 8800'),new RamD('DDR3 1200mhz'),new SsdD('Sata 2.5 kingstore'))),
-    new Computer(999,new Desktop('3.7v 8800mha',new MotherboardL('PS2-int-854'),new CpuL('Q9400m'),new GpuL('Intel HD'),new RamL('SoDimm DDR3 1200mhz'),new SsdL('M.2 kingstore'))),
+    new Desktop(999,'Cooler MasterXXX',new CpuD('Q9400'),new GpuD('Nvidea GTS 8800'),new RamD('DDR3 1200mhz'),new SsdD('Sata 2.5 kingstore'),new MotherboardD('PSQ-int-584')),
+    new Laptop(1333,'3.7v 8800mha',new CpuL('Q9400m'),new GpuL('Intel HD'),new RamL('SoDimm DDR3 1200mhz'),new SsdL('M.2 kingstore'),new MotherboardL('PS2-int-854')),
 
 ];

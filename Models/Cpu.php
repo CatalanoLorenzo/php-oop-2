@@ -1,14 +1,14 @@
 <?php
-class CpuD extends Desktop{
-    function __construct($price,$psu,public string $name){
-        parent:: __construct($price,$psu);
+class CpuD{
+    function __construct(public string $name){
+        
         $this->name = $name;
 
     }
 }
-class CpuL  extends Laptop {
-    function __construct($price,$battery,public string $name){
-        parent:: __construct($price,$battery);
+class CpuL{
+    function __construct(public string $name){
+        
         $this->name = $name;
 
     }

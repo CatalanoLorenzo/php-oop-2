@@ -1,14 +1,12 @@
 <?php
-class RamD extends Desktop{
-    function __construct($price,$psu,public string $name){
-        parent:: __construct($price,$psu);
+class RamD {
+    function __construct(public string $name){
         $this->name = $name;
 
     }
 }
-class RamL  extends Laptop {
-    function __construct($price,$battery,public string $name){
-        parent:: __construct($price,$battery);
+class RamL{
+    function __construct(public string $name){
         $this->name = $name;
 
     }
