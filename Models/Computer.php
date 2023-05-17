@@ -1,12 +1,8 @@
 <?php
 class Computer{
-    function __construct(public string $motherboard,public string $cpu,public string $gpu,public string $ram,public string $ssd,)
+    function __construct(public int $price)
     {
-        $this->motherboard = $motherboard;
-        $this->cpu = $cpu;
-        $this->gpu = $gpu;
-        $this->ram = $ram;
-        $this->ssd = $ssd;
+        $this->price = $price;
         
     }
 }

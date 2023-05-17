@@ -1,7 +1,7 @@
 <?php
 class Laptop extends Computer{
-    function __construct($motherboard,$cpu,$gpu,$ram,$ssd,public string $battery){
-        parent::__construct($motherboard,$cpu,$gpu,$ram,$ssd);
+    function __construct($price,public string $battery){
+        parent::__construct($price);
         $this->battery = $battery;
     }
 }
