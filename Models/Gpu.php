@@ -1,13 +1,11 @@
 <?php
-class GpuD{
-    function __construct(public string $name){
-        $this->name = $name;
-
+trait Gpu{
+    private $gpu_name;
+    public function get_gpu_name(){
+        return $this->gpu_name;
     }
-}
-class GpuL{
-    function __construct(public string $name){
-        $this->name = $name;
-
+    public function set_gpu_name(string $_name){
+        $this->gpu_name = $_name;
     }
-}
+    }
+

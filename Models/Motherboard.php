@@ -1,13 +1,13 @@
 <?php
-class MotherboardD{
-    function __construct(public string $name){
-        $this->name = $name;
-
+trait Motherboard
+{
+    private $mbname;
+    public function get_mb_name()
+    {
+        return $this->mbname;
     }
-}
-class MotherboardL {
-    function __construct(public string $name){
-        $this->name = $name;
-
+    public function set_mb_name(string $_name)
+    {
+        $this->mbname = $_name;
     }
 }

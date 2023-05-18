@@ -1,8 +1,6 @@
 <?php
 include_once __DIR__ . "/Database/database.php";
 
-var_dump($computers)
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -26,21 +24,14 @@ var_dump($computers)
     <div class="contaier">
       <div class="row">
         <? foreach ($computers as $computer) : ?>
-          <div class="card">
+          <div class="card col-3">
             <div class="card-header">
-              <h3><?= $computer->battery? 'Desktop' : 'Laptop' ?></h3>
+              <h3><?= $computer->get_type() ?></h3>
             </div>
             <div class="card-body">
-              <ul>
-                <?php foreach ($computer as $item) : ?>
-                  <?php if (is_int($item) || is_string($item)) : ?>
-                    <li><?= $item; ?></li>
-                  <?php else :?>
-                    <?php foreach ($item as $component) : ?>
-                      <li><?= $component; ?></li>
-                      <?php endforeach ?>
-
-                  <? endif; ?>
+              <ul class="list-group">
+                <?php foreach ($computer->get_components_as_array() as $item) : ?>
+                    <li class="list-group-item"><?= $item; ?></li>
                 <?php endforeach ?>
               </ul>
             </div>
